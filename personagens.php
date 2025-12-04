@@ -1,17 +1,18 @@
 <?php
+require "classes/Personagens.php";
 require "classes/Fantasma.php";
 require "classes/Lobisomem.php";
 require "classes/Vampiro.php";
 require "classes/Zumbi.php";
 
-if ($classe === 'Guerreiro') {
-     $personagem = new Guerreiro();
-} else if ($classe === 'Arqueiro') {
-     $personagem = new Arqueiro();
-} else if ($classe === 'Mago') {
-     $personagem = new Mago();
-} else if ($classe === 'Barbaro') {
-     $personagem = new Barbaro();
+if ($classe === 'Fantasma') {
+     $personagem = new Fantasma();
+} else if ($classe === 'Zumbi') {
+     $personagem = new Zumbi();
+} else if ($classe === 'Lobisomem') {
+     $personagem = new Lobisomem();
+} else if ($classe === 'Vampiro') {
+     $personagem = new Vampiro();
 }
 
 ?>
@@ -82,8 +83,8 @@ if ($classe === 'Guerreiro') {
                                         <div>
                                             <h3>Ações</h3>
                                             <p style="margin: 0px;"><?php echo $personagem->ataqueComum(); ?></p>
-                                            <p style="margin: 0px;"><?php echo $personagem->defender(); ?></p>
-                                            <p style="margin: 0px;"><?php echo $personagem->esquivar(); ?></p>
+                                            <p style="margin: 0px;"><?php echo $personagem->defesa(); ?></p>
+                                            <p style="margin: 0px;"><?php echo $personagem->esquiva(); ?></p>
                                             <p style="margin: 0px; margin-bottom:-20px"><?php echo $personagem->fugir(); ?></p>
                                         </div>
                                         <div>
